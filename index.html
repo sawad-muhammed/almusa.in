@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AlmusA - Professional IT Solutions</title>
+  <meta name="description" content="AlmusA - Professional IT Solutions specializing in AWS, Docker, Kubernetes, and Server Management." />
+  <meta name="keywords" content="AlmusA, AWS, Docker, Kubernetes, IT Solutions, Cloud, Data Backup" />
+  <meta name="author" content="AlmusA" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://almusa.in/" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <style>
+    /* Aurora Animation */
+    .aurora {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      background: radial-gradient(ellipse at bottom, #0f2027, #203a43, #2c5364);
+    }
+
+    .aurora::before, .aurora::after {
+      content: "";
+      position: absolute;
+      width: 200%;
+      height: 200%;
+      background: conic-gradient(
+        from 90deg,
+        rgba(0, 255, 255, 0.1),
+        rgba(0, 128, 255, 0.25),
+        rgba(128, 0, 255, 0.2),
+        rgba(0, 255, 128, 0.25),
+        rgba(0, 255, 255, 0.1)
+      );
+      animation: auroraMove 10s linear infinite;
+      mix-blend-mode: overlay;
+    }
+
+    .aurora::after {
+      animation-direction: reverse;
+      opacity: 0.6;
+    }
+
+    @keyframes auroraMove {
+      0% { transform: rotate(0deg) scale(1); }
+      100% { transform: rotate(360deg) scale(1.2); }
+    }
+  </style>
+</head>
+
+<body class="bg-[#0d1117] text-gray-200 font-sans relative">
+
+  <!-- Header -->
+  <header class="fixed top-0 left-0 w-full bg-[#0f172a]/80 backdrop-blur-md z-50 shadow-lg">
+    <div class="max-w-6xl mx-auto flex justify-between items-center py-4 px-6">
+      <a href="/" class="flex items-center space-x-3">
+        <img src="images/logo.png" alt="AlmusA Logo" class="h-10 w-auto">
+        <span class="text-2xl font-bold text-teal-400">AlmusA</span>
+      </a>
+      <nav>
+        <ul class="flex space-x-6 text-gray-300">
+          <li><a href="#about" class="hover:text-teal-400 transition">About</a></li>
+          <li><a href="#services" class="hover:text-teal-400 transition">Services</a></li>
+          <li><a href="#projects" class="hover:text-teal-400 transition">Projects</a></li>
+          <li><a href="#contact" class="hover:text-teal-400 transition">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative flex items-center justify-center h-screen text-center overflow-hidden">
+    <div class="aurora"></div>
+    <div class="relative z-10 px-6">
+      <h1 class="text-5xl md:text-6xl font-extrabold text-white drop-shadow-md">Empowering Modern IT Infrastructure</h1>
+      <p class="mt-6 text-lg md:text-xl text-gray-300 max-w-2xl mx-auto">
+        AlmusA specializes in AWS, Docker, Kubernetes, and secure server management — helping businesses stay reliable and future-ready.
+      </p>
+      <a href="#contact" class="mt-8 inline-block bg-teal-500 hover:bg-teal-600 text-white px-8 py-3 rounded-lg font-semibold transition">
+        Get in Touch
+      </a>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-20 bg-[#111827]">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-semibold text-teal-400 mb-6">About AlmusA</h2>
+      <p class="text-gray-300 text-lg leading-relaxed">
+        AlmusA is a professional IT services company delivering high-performance infrastructure, server automation,
+        and cloud deployment solutions. We combine deep expertise with reliability and innovation to simplify complex IT ecosystems.
+      </p>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="bg-[#0d1117] py-20">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-semibold text-teal-400 mb-10">Our Services</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="p-6 bg-[#1e293b] rounded-xl shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-bold text-white mb-3">Server Management</h3>
+          <p class="text-gray-400">Setup, monitoring, and optimization of Linux and Windows systems with reliability and performance in focus.</p>
+        </div>
+        <div class="p-6 bg-[#1e293b] rounded-xl shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-bold text-white mb-3">Cloud & AWS</h3>
+          <p class="text-gray-400">Deploy and manage secure, scalable cloud environments using AWS and modern automation practices.</p>
+        </div>
+        <div class="p-6 bg-[#1e293b] rounded-xl shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-bold text-white mb-3">Docker & Kubernetes</h3>
+          <p class="text-gray-400">Modern application delivery with robust container orchestration and high-availability cluster setups.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects / Subdomains -->
+  <section id="projects" class="py-20 bg-[#111827]">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-semibold text-teal-400 mb-10">Our Projects</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <a href="https://shop.almusa.in" target="_blank" class="block bg-[#1e293b] p-6 rounded-xl hover:shadow-lg transition transform hover:-translate-y-1">
+          <h3 class="text-xl font-bold text-white mb-2">Pattammakudiyil Stores</h3>
+          <p class="text-gray-400">Retail management software handled by AlmusA for efficient store operations.</p>
+        </a>
+        <a href="https://mail.almusa.in" target="_blank" class="block bg-[#1e293b] p-6 rounded-xl hover:shadow-lg transition transform hover:-translate-y-1">
+          <h3 class="text-xl font-bold text-white mb-2">Mail Server</h3>
+          <p class="text-gray-400">Official AlmusA mail platform providing secure and efficient communication for our team.</p>
+        </a>
+        <a href="https://dev.almusa.in" target="_blank" class="block bg-[#1e293b] p-6 rounded-xl hover:shadow-lg transition transform hover:-translate-y-1">
+          <h3 class="text-xl font-bold text-white mb-2">Development Environment</h3>
+          <p class="text-gray-400">Sandbox for testing and building new websites and products managed by AlmusA developers.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="bg-[#0d1117] py-20 text-center">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-3xl font-semibold text-teal-400 mb-4">Contact Us</h2>
+      <p class="text-lg text-gray-400 mb-6">
+        Have a project in mind or want to collaborate? Get in touch with our team today.
+      </p>
+      <div class="space-y-3">
+        <a href="mailto:support@almusa.in" class="block text-teal-400 hover:text-teal-300 text-lg">📧 support@almusa.in</a>
+        <a href="tel:+917356542721" class="block text-teal-400 hover:text-teal-300 text-lg">📞 +91 7356542721</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[#111827] text-gray-400 py-6 text-center border-t border-gray-700">
+    <p>© 2025 AlmusA. All rights reserved.</p>
+    <p class="text-sm mt-1">Built with ❤️ by the AlmusA Team</p>
+  </footer>
+</body>
+</html>

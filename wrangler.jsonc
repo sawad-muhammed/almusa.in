@@ -2,18 +2,15 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "almusa-in",
   "compatibility_date": "2026-07-19",
-
-  "observability": {
-    "enabled": true
-  },
-
-  "assets": {
-    "directory": "."
-  },
-
   "compatibility_flags": [
     "nodejs_compat"
   ],
+  "observability": {
+    "enabled": true
+  },
+  "assets": {
+    "not_found_handling": "single-page-application"
+  },
   "domains": [
     {
       "domain": "almusa.in"

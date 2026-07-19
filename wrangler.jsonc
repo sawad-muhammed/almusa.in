@@ -9,11 +9,7 @@
     "enabled": true
   },
   "assets": {
+    "directory": "./dist",
     "not_found_handling": "single-page-application"
-  },
-  "domains": [
-    {
-      "domain": "almusa.in"
-    }
-  ]
+  }
 }

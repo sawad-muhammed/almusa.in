@@ -5,7 +5,7 @@ function App() {
     <div className="container">
       <div className="content">
         <h1>Coming Soon</h1>
-        <p>We're working on something amazing.</p>
+        <p>We're working on something amazing!</p>
       </div>
     </div>
   );

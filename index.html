@@ -13,15 +13,12 @@
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {}
-      }
-    }
-  </script>
-  
   <style>
+    body {
+      background-color: #0d1117;
+      color: #e5e7eb;
+    }
+
     .aurora {
       position: absolute;
       inset: 0;
@@ -58,6 +55,15 @@
 
     html {
       scroll-behavior: smooth;
+    }
+
+    /* Ensure text is visible */
+    h1, h2, h3, h4, h5, h6 {
+      color: white;
+    }
+
+    p {
+      color: #d1d5db;
     }
   </style>
 </head>

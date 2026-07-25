@@ -97,7 +97,7 @@ export default function Header() {
                   onClick={() => scrollToSection('contact')}
                   className="hover:text-teal-400 transition cursor-pointer block w-full text-left"
                 >
-                  Contact
+                  Contacts
                 </button>
               </li>
             </ul>

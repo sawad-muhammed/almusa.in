@@ -1,13 +1,68 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AlmusA</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AlmusA</title>
+  <meta name="description" content="AlmusA - Professional IT Solutions specializing in AWS, Docker, Kubernetes, and Server Management." />
+  <meta name="keywords" content="AlmusA, AWS, Docker, Kubernetes, IT Solutions, Cloud" />
+  <meta name="author" content="AlmusA" />
+  <link rel="canonical" href="https://almusa.in/" />
+  <link rel="icon" type="image/png" href="/favicon.png">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {}
+      }
+    }
+  </script>
+  
+  <style>
+    .aurora {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      background: radial-gradient(ellipse at bottom, #0f2027, #203a43, #2c5364);
+    }
+
+    .aurora::before, .aurora::after {
+      content: "";
+      position: absolute;
+      width: 200%;
+      height: 200%;
+      background: conic-gradient(
+        from 90deg,
+        rgba(0, 255, 255, 0.1),
+        rgba(0, 128, 255, 0.25),
+        rgba(128, 0, 255, 0.2),
+        rgba(0, 255, 128, 0.25),
+        rgba(0, 255, 255, 0.1)
+      );
+      animation: auroraMove 10s linear infinite;
+      mix-blend-mode: overlay;
+    }
+
+    .aurora::after {
+      animation-direction: reverse;
+      opacity: 0.6;
+    }
+
+    @keyframes auroraMove {
+      0% { transform: rotate(0deg) scale(1); }
+      100% { transform: rotate(360deg) scale(1.2); }
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body class="bg-[#0d1117] text-gray-200 font-sans">
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
 </html>

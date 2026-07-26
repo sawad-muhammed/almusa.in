@@ -1,28 +1,18 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "almusa-in",
-  "type": "javascript",
   "compatibility_date": "2026-07-17",
 
-  // Build configuration
   "build": {
     "command": "npm run build",
     "cwd": "./"
   },
 
-  // Assets configuration for static files
   "assets": {
-    "directory": "dist",
-    "binding": "ASSETS"
+    "directory": "dist"
   },
 
-  // Site configuration
   "site": {
     "bucket": "dist"
-  },
-
-  // Observability
-  "observability": {
-    "enabled": true
   }
 }

@@ -21,7 +21,7 @@ export default function Header() {
         {/* Logo */}
         <Link to="/" className="flex items-center space-x-2 hover:opacity-90 transition">
           <span className="text-3xl font-bold bg-gradient-to-r from-teal-400 to-cyan-300 bg-clip-text text-transparent">
-            AlmusA
+            {t('header.title')}
           </span>
         </Link>
         

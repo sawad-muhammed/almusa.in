@@ -4,15 +4,13 @@ import LanguageDetector from 'i18next-browser-languagedetector'
 
 // Import translation files
 import enTranslation from '../public/locale/en.json'
-// import esTranslation from './locales/es/translation.json'
-// import frTranslation from './locales/fr/translation.json'
 import hiTranslation from '../public/locale/hi.json'
+import arTranslation from '../public/locale/ar.json'
 
 const resources = {
   en: { translation: enTranslation },
-//   es: { translation: esTranslation },
-//   fr: { translation: frTranslation },
-  hi: { translation: hiTranslation }
+  hi: { translation: hiTranslation },
+  ar: { translation: arTranslation },
 }
 
 i18n
@@ -21,6 +19,10 @@ i18n
   .init({
     resources,
     fallbackLng: 'en',
+    // detection: {
+    //   order: ['localStorage', 'navigator'],
+    //   caches: ['localStorage']
+    // },
     interpolation: {
       escapeValue: false
     }

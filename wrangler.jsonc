@@ -1,16 +1,71 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "almusa-in",
+  "type": "javascript",
+  "main": "dist/index.js",
   "compatibility_date": "2026-07-17",
-  "observability": {
-    "enabled": true
-  },
-  "assets": {
-    "not_found_handling": "single-page-application"
-  },
   "compatibility_flags": [
     "nodejs_compat"
   ],
-  "domain": "almusa.in",
 
+  // Build configuration
+  "build": {
+    "command": "npm run build",
+    "cwd": "./",
+    "watch_paths": ["src/**/*.ts", "src/**/*.tsx"]
+  },
+
+  // Assets configuration - REQUIRED
+  "assets": {
+    "directory": "dist",
+    "binding": "ASSETS"
+  },
+
+  // Site configuration for static files
+  "site": {
+    "bucket": "dist"
+  },
+
+  // Routes for your domain
+  "routes": [
+    {
+      "pattern": "almusa.in/*",
+      "zone_name": "almusa.in"
+    }
+  ],
+
+  // Observability
+  "observability": {
+    "enabled": true
+  },
+
+  // Environment variables
+  "env": {
+    "production": {
+      "name": "almusa-in-prod",
+      "routes": [
+        {
+          "pattern": "almusa.in/*",
+          "zone_name": "almusa.in"
+        }
+      ],
+      "vars": {
+        "ENVIRONMENT": "production",
+        "API_URL": "https://api.almusa.in"
+      }
+    },
+    "staging": {
+      "name": "almusa-in-staging",
+      "routes": [
+        {
+          "pattern": "dev.almusa.in/*",
+          "zone_name": "almusa.in"
+        }
+      ],
+      "vars": {
+        "ENVIRONMENT": "staging",
+        "API_URL": "https://staging-api.almusa.in"
+      }
+    }
+  }
 }

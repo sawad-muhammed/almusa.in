@@ -1,3 +1,57 @@
 {
-    
+  "header": {
+    "about": "About",
+    "services": "Services",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Empowering Modern IT Infrastructure",
+    "subtitle": "AlmusA specializes in AWS, Docker, Kubernetes, and secure server management — helping businesses stay reliable and future-ready.",
+    "cta": "Get in Touch"
+  },
+  "about": {
+    "title": "About AlmusA",
+    "content": "AlmusA is a professional IT services company delivering high-performance infrastructure, server automation, and cloud deployment solutions."
+  },
+  "services": {
+    "title": "Our Services",
+    "serverManagement": {
+      "title": "Server Management",
+      "description": "Setup, monitoring, and optimization of Linux and Windows systems with reliability and performance in focus."
+    },
+    "cloudAWS": {
+      "title": "Cloud & AWS",
+      "description": "Deploy and manage secure, scalable cloud environments using AWS and modern automation practices."
+    },
+    "docker": {
+      "title": "Docker & Kubernetes",
+      "description": "Modern application delivery with robust container orchestration and high-availability cluster setups."
+    }
+  },
+  "projects": {
+    "title": "Our Projects",
+    "stores": {
+      "title": "Pattammakudiyil Stores",
+      "description": "Retail management software handled by AlmusA for efficient store operations."
+    },
+    "mail": {
+      "title": "Mail Server",
+      "description": "Official AlmusA mail platform providing secure and efficient communication for our team."
+    },
+    "dev": {
+      "title": "Development Environment",
+      "description": "Sandbox for testing and building new websites and products managed by AlmusA developers."
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Have a project in mind or want to collaborate? Get in touch with our team today.",
+    "email": "📧 support@almusa.in",
+    "phone": "📞 +91 7356542721"
+  },
+  "footer": {
+    "copyright": "© 2025 AlmusA. All rights reserved.",
+    "credit": "Built with ❤️ by the AlmusA Team"
+  }
 }

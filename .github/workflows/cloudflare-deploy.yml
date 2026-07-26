@@ -1,4 +1,4 @@
-name: Deploy with Wrangler
+name: Deploy to Cloudflare Pages
 
 on:
   push:
@@ -10,17 +10,18 @@ jobs:
     
     steps:
       - uses: actions/checkout@v4
-      
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
           cache: npm
       
       - run: npm ci
-      
       - run: npm run build
       
-      - run: npx wrangler deploy
-        env:
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      - uses: cloudflare/pages-action@v1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: almusa-in
+          directory: dist
+          branch: main

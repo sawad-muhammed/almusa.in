@@ -9,7 +9,7 @@ export default function ProjectCard({
   title, 
   description, 
   link,
-  icon = '🚀'
+  icon
 }: ProjectCardProps) {
   return (
     <a 

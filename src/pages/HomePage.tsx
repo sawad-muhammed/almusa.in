@@ -69,7 +69,7 @@ export default function HomePage() {
       </section>
 
       {/* About Section */}
-      <Section id="about" title="About AlmusA" bgColor="bg-[#111827]">
+      <Section id="about" title={t('about.title')} bgColor="bg-[#111827]">
         <p className="text-gray-300 text-lg leading-relaxed max-w-3xl mx-auto">
           {t('about.content')}
         </p>

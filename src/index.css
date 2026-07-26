@@ -1,86 +1,30 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* Language Switcher Animations */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-html, body, #root {
-  width: 100%;
-  height: 100%;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.animate-in {
+  animation: slideDown 0.3s ease-out;
 }
 
-html {
-  scroll-behavior: smooth;
+/* Language Button Styles */
+[role="menuitem"]:hover {
+  @apply bg-teal-500/10 transition-colors;
 }
 
-/* Aurora Animation */
-.aurora {
-  position: absolute;
-  inset: 0;
-  overflow: hidden;
-  background: radial-gradient(ellipse at bottom, #0f2027, #203a43, #2c5364);
-}
-
-.aurora::before, .aurora::after {
-  content: "";
-  position: absolute;
-  width: 200%;
-  height: 200%;
-  background: conic-gradient(
-    from 90deg,
-    rgba(0, 255, 255, 0.1),
-    rgba(0, 128, 255, 0.25),
-    rgba(128, 0, 255, 0.2),
-    rgba(0, 255, 128, 0.25),
-    rgba(0, 255, 255, 0.1)
-  );
-  animation: auroraMove 10s linear infinite;
-  mix-blend-mode: overlay;
-}
-
-.aurora::after {
-  animation-direction: reverse;
-  opacity: 0.6;
-}
-
-@keyframes auroraMove {
-  0% { transform: rotate(0deg) scale(1); }
-  100% { transform: rotate(360deg) scale(1.2); }
-}
-
-/* Blob Animation */
-@keyframes blob {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  25% { transform: translate(20px, -50px) scale(1.1); }
-  50% { transform: translate(-20px, 20px) scale(0.9); }
-  75% { transform: translate(50px, 50px) scale(1.05); }
-}
-
-.animate-blob {
-  animation: blob 7s infinite;
-}
-
-.animation-delay-2000 {
-  animation-delay: 2s;
-}
-
-.animation-delay-4000 {
-  animation-delay: 4s;
-}
-
-/* Smooth Transitions */
-button, a {
+/* Smooth transitions */
+button {
   @apply transition-all duration-300;
 }
 
-/* Section Spacing */
-section {
-  @apply scroll-mt-20;
+/* RTL Support */
+[dir="rtl"] .space-x-reverse > * + * {
+  --tw-space-x-reverse: 1;
 }

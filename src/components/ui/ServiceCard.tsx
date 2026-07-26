@@ -4,7 +4,7 @@ interface ServiceCardProps {
   icon?: string
 }
 
-export default function ServiceCard({ title, description, icon = '⚙️' }: ServiceCardProps) {
+export default function ServiceCard({ title, description, icon }: ServiceCardProps) {
   return (
     <div className="group p-8 bg-gradient-to-br from-[#1e293b] to-[#0f172a] rounded-xl border border-teal-500/20 hover:border-teal-500/50 shadow-lg hover:shadow-teal-500/20 transition-all duration-300 hover:-translate-y-2">
       <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">{icon}</div>

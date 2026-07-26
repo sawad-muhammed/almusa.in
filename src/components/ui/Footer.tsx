@@ -39,8 +39,8 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold text-white mb-4">Contact</h4>
             <div className="space-y-2 text-sm">
-              <p><a href="mailto:support@almusa.in" className="hover:text-teal-400 transition">support@almusa.in</a></p>
-              <p><a href="tel:+917356542721" className="hover:text-teal-400 transition">+91 7356542721</a></p>
+              <p><a href="mailto:support@almusa.in" className="hover:text-teal-400 transition">{t('contact.email')}</a></p>
+              <p><a href="tel:+917356542721" className="hover:text-teal-400 transition">{t('contact.phone')}</a></p>
             </div>
           </div>
         </div>

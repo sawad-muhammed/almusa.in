@@ -4,7 +4,7 @@ import Button from '@/components/ui/Button'
 import ServiceCard from '@/components/ui/ServiceCard'
 import ProjectCard from '@/components/ui/ProjectCard'
 import { useTranslation } from 'react-i18next'
-import LanguageSwitcher from '@/components/ui/LanguageSwitcher'
+// import LanguageSwitcher from '@/components/ui/LanguageSwitcher'
 
 
 export default function HomePage() {
@@ -14,36 +14,40 @@ export default function HomePage() {
 
   const services = [
     {
-      title: 'Server Management',
-      description: 'Setup, monitoring, and optimization of Linux and Windows systems with reliability and performance in focus.'
+      title: t('services.serverManagement.title'),
+      description: t('services.serverManagement.description')
     },
     {
-      title: 'Cloud & AWS',
-      description: 'Deploy and manage secure, scalable cloud environments using AWS and modern automation practices.'
+      title: t('services.cloudAWS.title'),
+      description: t('services.cloudAWS.description')
     },
     {
-      title: 'Docker & Kubernetes',
-      description: 'Modern application delivery with robust container orchestration and high-availability cluster setups.'
+      title: t('services.docker.title'),
+      description: t('services.docker.description')
     },
   ]
 
   const projects = [
     {
-      title: 'Pattammakudiyil Stores',
-      description: 'Retail management software handled by AlmusA for efficient store operations.',
-      link: 'https://shop.almusa.in'
+      title: t('projects.stores.title'),           
+      description: t('projects.stores.description'), 
+      link: 'https://shop.almusa.in',
+      icon: '🏪'
     },
     {
-      title: 'Mail Server',
-      description: 'Official AlmusA mail platform providing secure and efficient communication for our team.',
-      link: 'https://mail.almusa.in'
+      title: t('projects.mail.title'),           
+      description: t('projects.mail.description'), 
+      link: 'https://mail.almusa.in',
+      icon: '📧'
     },
     {
-      title: 'Development Environment',
-      description: 'Sandbox for testing and building new websites and products managed by AlmusA developers.',
-      link: 'https://dev.almusa.in'
+      title: t('projects.dev.title'),           
+      description: t('projects.dev.description'), 
+      link: 'https://dev.almusa.in',
+      icon: '💻'
     },
   ]
+
 
   return (
     <div>
@@ -56,7 +60,7 @@ export default function HomePage() {
             {t('hero.title')}
           </h1>
           <p className="mt-6 text-lg md:text-xl text-gray-300 max-w-2xl mx-auto">
-            {t('hero.description')}
+            {t('hero.subtitle')}
           </p>
           <Button onClick={() => scrollToSection('contact')}>
             {t('hero.cta')}
@@ -67,12 +71,12 @@ export default function HomePage() {
       {/* About Section */}
       <Section id="about" title="About AlmusA" bgColor="bg-[#111827]">
         <p className="text-gray-300 text-lg leading-relaxed max-w-3xl mx-auto">
-          {t('about.description')}
+          {t('about.content')}
         </p>
       </Section>
 
       {/* Services Section */}
-      <Section id="services" title="Our Services">
+      <Section id="services" title={t('services.title')} bgColor="bg-[#0f172a]">
         <div className="grid md:grid-cols-3 gap-8">
           {services.map((service, i) => (
             <ServiceCard key={i} {...service} />
@@ -81,7 +85,7 @@ export default function HomePage() {
       </Section>
 
       {/* Projects Section */}
-      <Section id="projects" title="Our Projects" bgColor="bg-[#111827]">
+      <Section id="projects" title={t('projects.title')} bgColor="bg-[#111827]">
         <div className="grid md:grid-cols-3 gap-8">
           {projects.map((project, i) => (
             <ProjectCard key={i} {...project} />
@@ -90,16 +94,16 @@ export default function HomePage() {
       </Section>
 
       {/* Contact Section */}
-      <Section id="contact" title="Contact Us" >
+      <Section id="contact" title={t('contact.title')} >
         <p className="text-gray-400 text-lg mb-6 text-center">
-          {t('contact.description')}
+          {t('contact.subtitle')}
         </p>
         <div className="space-y-3">
           <a href="mailto:support@almusa.in" className="block text-teal-400 hover:text-teal-300 text-lg text-center">
-            📧 support@almusa.in
+            {t('contact.email')}
           </a>
           <a href="tel:+917356542721" className="block text-teal-400 hover:text-teal-300 text-lg text-center">
-            📞 +91 7356542721
+            {t('contact.phone')}
           </a>
         </div>
       </Section>

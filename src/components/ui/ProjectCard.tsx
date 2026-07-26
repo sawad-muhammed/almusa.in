@@ -5,7 +5,12 @@ interface ProjectCardProps {
   icon?: string
 }
 
-export default function ProjectCard({ title, description, link, icon = '🚀' }: ProjectCardProps) {
+export default function ProjectCard({ 
+  title, 
+  description, 
+  link,
+  icon = '🚀'
+}: ProjectCardProps) {
   return (
     <a 
       href={link} 
@@ -13,15 +18,17 @@ export default function ProjectCard({ title, description, link, icon = '🚀' }:
       rel="noopener noreferrer" 
       className="group block p-8 bg-gradient-to-br from-[#1e293b] to-[#0f172a] rounded-xl border border-teal-500/20 hover:border-teal-500/50 shadow-lg hover:shadow-teal-500/20 transition-all duration-300 hover:-translate-y-2"
     >
-      <div className="flex items-start justify-between mb-4">
-        <div className="text-3xl group-hover:scale-110 transition-transform">{icon}</div>
-        <svg className="w-5 h-5 text-teal-400 opacity-0 group-hover:opacity-100 transition-all transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7m0 0l-7 7m7-7H5" />
-        </svg>
+      {/* Icon */}
+      <div className="text-3xl mb-4 group-hover:scale-110 transition-transform">
+        {icon}
       </div>
+
+      {/* Title - Use prop directly, not translation key */}
       <h3 className="text-xl font-bold text-white mb-3 group-hover:text-teal-400 transition-colors">
         {title}
       </h3>
+
+      {/* Description - Use prop directly, not translation key */}
       <p className="text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors">
         {description}
       </p>

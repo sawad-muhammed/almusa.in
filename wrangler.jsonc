@@ -10,5 +10,7 @@
   },
   "compatibility_flags": [
     "nodejs_compat"
-  ]
+  ],
+  "domain": "almusa.in",
+
 }

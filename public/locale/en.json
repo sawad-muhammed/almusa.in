@@ -48,7 +48,9 @@
     "title": "Contact Us",
     "subtitle": "Have a project in mind or want to collaborate? Get in touch with our team today.",
     "email": "📧 support@almusa.in",
-    "phone": "📞 +91 7356542721"
+    "phone": "📞 +91 7356542721",
+    "phoneLink": "tel:+917356542721",
+    "emailLink": "mailto:support@almusa.in"
   },
   "footer": {
     "copyright": "© 2025 AlmusA. All rights reserved.",

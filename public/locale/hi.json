@@ -48,10 +48,12 @@
     "title": "हमसे संपर्क करें",
     "subtitle": "क्या आपके मन में कोई परियोजना है या सहयोग करना चाहते हैं? आज ही हमारी टीम से संपर्क करें।",
     "email": "📧 support@almusa.in",
-    "phone": "📞 +91 7356542721"
+    "phone": "📞 +91 7356542721",
+    "phoneLink": "tel:+917356542721",
+    "emailLink": "mailto:support@almusa.in"
   },
   "footer": {
-    "copyright": "© 2025 AlmusA। सर्वाधिकार सुरक्षित।",
+    "copyright": "© 2025 AlmusA । सर्वाधिकार सुरक्षित।",
     "credit": "AlmusA टीम द्वारा ❤️ से बनाया गया"
   }
 }

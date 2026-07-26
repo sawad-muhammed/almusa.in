@@ -99,10 +99,10 @@ export default function HomePage() {
           {t('contact.subtitle')}
         </p>
         <div className="space-y-3">
-          <a href="mailto:support@almusa.in" className="block text-teal-400 hover:text-teal-300 text-lg text-center">
+          <a href={t('contact.emailLink')} className="block text-teal-400 hover:text-teal-300 text-lg text-center">
             {t('contact.email')}
           </a>
-          <a href="tel:+917356542721" className="block text-teal-400 hover:text-teal-300 text-lg text-center">
+          <a href={t('contact.phoneLink')} className="block text-teal-400 hover:text-teal-300 text-lg text-center">
             {t('contact.phone')}
           </a>
         </div>

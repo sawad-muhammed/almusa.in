@@ -22,7 +22,7 @@ export default function Header() {
         {/* Logo */}
         <Link to="/" className="flex items-center space-x-2 rtl:space-x-reverse hover:opacity-90 transition">
           <div className="w-10 h-10 bg-gradient-to-br from-teal-400 to-cyan-300 rounded-lg flex items-center justify-center font-bold text-white">
-            A
+            <img src="../public/favicon.svg" alt="AlmusA Logo" className="w-16 h-18" />
           </div>
           <span className="text-2xl font-bold bg-gradient-to-r from-teal-400 to-cyan-300 bg-clip-text text-transparent">
             AlmusA
